@@ -4,14 +4,14 @@ const { all, markAsComplete, add, overdue, dueLater, dueToday } = todoList();
 describe("Todo New Test Suite", () => {
   beforeAll(() => {
     add({
-      title: "watching cricket",
+      title: "watching one",
       completed: false,
       dueDate: new Date(new Date().setDate(new Date().getDate() - 1))
         .toISOString()
         .slice(0, 10),
     });
     add({
-      title: "checking car",
+      title: "Checking car",
       completed: false,
       dueDate: new Date().toISOString().slice(0, 10),
     });
@@ -27,7 +27,7 @@ describe("Todo New Test Suite", () => {
     const todoItemsCounts = all.length;
     add([
       {
-        title: "Testing Overdue",
+        title: "Overdue status",
         completed: false,
         dueDate: new Date(new Date().setDate(new Date().getDate() - 1))
           .toISOString()
@@ -49,7 +49,7 @@ describe("Todo New Test Suite", () => {
         .length
     ).toBe(1);
     add({
-      title: "Due items",
+      title: "Overdue Items",
       completed: false,
       dueDate: new Date(new Date().setDate(new Date().getDate() - 1))
         .toISOString()
@@ -68,7 +68,7 @@ describe("Todo New Test Suite", () => {
       ).length
     ).toBe(1);
     add({
-      title: "Register phase",
+      title: "Submit one",
       completed: false,
       dueDate: new Date().toISOString().slice(0, 10),
     });
